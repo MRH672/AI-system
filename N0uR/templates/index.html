@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent - الذكي الذي يتعلم</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .stats-bar {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.agent {
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            word-wrap: break-word;
+            position: relative;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.agent .message-content {
+            background: white;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message-time {
+            font-size: 10px;
+            opacity: 0.7;
+            margin-top: 5px;
+        }
+
+        .input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .message-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .message-input:focus {
+            border-color: #667eea;
+        }
+
+        .send-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .feedback-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .feedback-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .feedback-btn.good {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .feedback-btn.bad {
+            background: #f44336;
+            color: white;
+        }
+
+        .feedback-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 12px 16px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 18px;
+            border-bottom-left-radius: 5px;
+            max-width: 70%;
+        }
+
+        .typing-indicator.show {
+            display: block;
+        }
+
+        .typing-dots {
+            display: inline-block;
+        }
+
+        .typing-dots::after {
+            content: '...';
+            animation: typing 1.5s infinite;
+        }
+
+        @keyframes typing {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .control-btn {
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                height: 100vh;
+                border-radius: 0;
+            }
+            
+            .message-content {
+                max-width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Agent</h1>
+            <p>الذكي الذي يتعلم من كل تفاعل</p>
+            <div class="stats-bar">
+                <span id="conversations-count">المحادثات: 0</span>
+                <span id="patterns-count">الأنماط: 0</span>
+                <span id="preferences-count">التفضيلات: 0</span>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="message agent">
+                    <div class="message-content">
+                        مرحباً! أنا AI Agent أتعلم من كل تفاعل معك. كيف يمكنني مساعدتك اليوم؟
+                        <div class="message-time" id="welcome-time"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="typing-indicator show" id="typing">
+                    <span class="typing-dots">AI Agent يفكر</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-group">
+                <input type="text" id="messageInput" class="message-input" 
+                       placeholder="اكتب رسالتك هنا..." maxlength="500">
+                <button id="sendBtn" class="send-btn">إرسال</button>
+            </div>
+            
+            <div class="feedback-buttons" id="feedbackButtons" style="display: none;">
+                <button class="feedback-btn good" onclick="submitFeedback('good')">👍 جيد</button>
+                <button class="feedback-btn bad" onclick="submitFeedback('bad')">👎 سيء</button>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" onclick="showStats()">📊 الإحصائيات</button>
+                <button class="control-btn" onclick="resetMemory()">🔄 إعادة تعيين</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentUserInput = '';
+        let currentAgentResponse = '';
+        let conversationCount = 0;
+
+        // إعداد الوقت الترحيبي
+        document.getElementById('welcome-time').textContent = new Date().toLocaleTimeString('ar-SA');
+
+        // إعداد الأحداث
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        document.getElementById('sendBtn').addEventListener('click', sendMessage);
+
+        async function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+            
+            if (!message) return;
+
+            // إخفاء أزرار ردود الفعل السابقة
+            document.getElementById('feedbackButtons').style.display = 'none';
+
+            // إضافة رسالة المستخدم
+            addMessage(message, 'user');
+            messageInput.value = '';
+
+            // إظهار مؤشر الكتابة
+            showTyping();
+
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: message })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    // إخفاء مؤشر الكتابة
+                    hideTyping();
+                    
+                    // إضافة رد الـ Agent
+                    addMessage(data.response, 'agent');
+                    
+                    // حفظ البيانات لردود الفعل
+                    currentUserInput = message;
+                    currentAgentResponse = data.response;
+                    
+                    // إظهار أزرار ردود الفعل
+                    document.getElementById('feedbackButtons').style.display = 'flex';
+                    
+                    // تحديث الإحصائيات
+                    updateStats(data.stats);
+                    conversationCount++;
+                } else {
+                    hideTyping();
+                    addMessage('عذراً، حدث خطأ في المعالجة.', 'agent');
+                }
+            } catch (error) {
+                hideTyping();
+                addMessage('عذراً، حدث خطأ في الاتصال.', 'agent');
+                console.error('Error:', error);
+            }
+        }
+
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            const time = new Date().toLocaleTimeString('ar-SA');
+            
+            messageDiv.innerHTML = `
+                <div class="message-content">
+                    ${text}
+                    <div class="message-time">${time}</div>
+                </div>
+            `;
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function showTyping() {
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('sendBtn').disabled = true;
+        }
+
+        function hideTyping() {
+            document.getElementById('loading').classList.remove('show');
+            document.getElementById('sendBtn').disabled = false;
+        }
+
+        async function submitFeedback(feedback) {
+            if (!currentUserInput || !currentAgentResponse) return;
+
+            try {
+                const response = await fetch('/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        user_input: currentUserInput,
+                        agent_response: currentAgentResponse,
+                        feedback: feedback
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    // إخفاء أزرار ردود الفعل
+                    document.getElementById('feedbackButtons').style.display = 'none';
+                    
+                    // إظهار رسالة تأكيد
+                    const feedbackMessage = feedback === 'good' ? 'شكراً لك! سأتعلم من هذا.' : 'شكراً لك! سأحسن من أدائي.';
+                    addMessage(feedbackMessage, 'agent');
+                }
+            } catch (error) {
+                console.error('Error submitting feedback:', error);
+            }
+        }
+
+        async function showStats() {
+            try {
+                const response = await fetch('/stats');
+                const data = await response.json();
+                
+                if (data.success) {
+                    const stats = data.stats;
+                    const statsMessage = `
+                        📊 إحصائيات التعلم:
+                        • إجمالي المحادثات: ${stats.total_conversations}
+                        • الأنماط المتعلمة: ${stats.learned_patterns}
+                        • تفضيلات المستخدم: ${stats.user_preferences}
+                        • المواضيع الأخيرة: ${stats.recent_topics.join(', ')}
+                        • توزيع المشاعر: إيجابي ${stats.sentiment_distribution.positive}, سلبي ${stats.sentiment_distribution.negative}, محايد ${stats.sentiment_distribution.neutral}
+                    `;
+                    addMessage(statsMessage, 'agent');
+                }
+            } catch (error) {
+                console.error('Error fetching stats:', error);
+                addMessage('عذراً، لا يمكن الحصول على الإحصائيات حالياً.', 'agent');
+            }
+        }
+
+        async function resetMemory() {
+            if (!confirm('هل أنت متأكد من إعادة تعيين الذاكرة؟ سيتم حذف جميع البيانات المحفوظة.')) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/reset', {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // مسح المحادثات
+                    document.getElementById('messages').innerHTML = `
+                        <div class="message agent">
+                            <div class="message-content">
+                                تم إعادة تعيين الذاكرة بنجاح! أنا جاهز للتعلم من جديد.
+                                <div class="message-time">${new Date().toLocaleTimeString('ar-SA')}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // إعادة تعيين الإحصائيات
+                    updateStats({
+                        total_conversations: 0,
+                        learned_patterns: 0,
+                        user_preferences: 0,
+                        recent_topics: [],
+                        sentiment_distribution: { positive: 0, negative: 0, neutral: 0 }
+                    });
+                    
+                    conversationCount = 0;
+                }
+            } catch (error) {
+                console.error('Error resetting memory:', error);
+                addMessage('عذراً، حدث خطأ في إعادة تعيين الذاكرة.', 'agent');
+            }
+        }
+
+        function updateStats(stats) {
+            document.getElementById('conversations-count').textContent = `المحادثات: ${stats.total_conversations}`;
+            document.getElementById('patterns-count').textContent = `الأنماط: ${stats.learned_patterns}`;
+            document.getElementById('preferences-count').textContent = `التفضيلات: ${stats.user_preferences}`;
+        }
+
+        // تحميل الإحصائيات الأولية
+        window.addEventListener('load', async function() {
+            try {
+                const response = await fetch('/stats');
+                const data = await response.json();
+                
+                if (data.success) {
+                    updateStats(data.stats);
+                }
+            } catch (error) {
+                console.error('Error loading initial stats:', error);
+            }
+        });
+    </script>
+</body>
+</html>
