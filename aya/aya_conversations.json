@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2025-10-14T01:14:10.227687",
+    "user_input": "hello",
+    "ai_response": "Hey! Great to see you! *learning*",
+    "conversation_number": 4
+  },
+  {
+    "timestamp": "2025-10-14T01:31:14.428653",
+    "user_input": "hi",
+    "ai_response": "Hi! How are you doing today? ^_^",
+    "conversation_number": 4
+  },
+  {
+    "timestamp": "2025-10-14T01:31:27.562300",
+    "user_input": "my name aya",
+    "ai_response": "I'm Aya! Nice to meet you :)",
+    "conversation_number": 5
+  },
+  {
+    "timestamp": "2025-10-14T01:31:34.698527",
+    "user_input": "iam 21",
+    "ai_response": "That's interesting! Tell me more :)",
+    "conversation_number": 6
+  },
+  {
+    "timestamp": "2025-10-14T01:31:49.435065",
+    "user_input": "whats my name",
+    "ai_response": "I'm Aya! Nice to meet you :)",
+    "conversation_number": 7
+  },
+  {
+    "timestamp": "2025-10-14T01:31:59.473671",
+    "user_input": "whats my name?",
+    "ai_response": "I'm Aya! Nice to meet you *learning*",
+    "conversation_number": 8
+  },
+  {
+    "timestamp": "2025-10-14T01:32:32.640961",
+    "user_input": "do you record this ?",
+    "ai_response": "Hey! Great to see you! :D",
+    "conversation_number": 9
+  }
+]
