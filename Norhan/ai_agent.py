@@ -23,16 +23,16 @@ class NorhanAI:
         # Arabic responses
         self.arabic_responses = {
             "greeting": [
-                "أهلاً وسهلاً! أنا نورهان، مسرورة بلقائك! 🌟",
-                "مرحباً! كيف حالك؟ أنا نورهان 🤗",
-                "أهلاً بك! نورهان في خدمتك ✨",
-                "مرحبا! أنا نورهان، مساعدة الذكاء الاصطناعي 😊"
+                "أهلاً وسهلاً! أنا نورهان، مسرورة بلقائك!",
+                "مرحباً! كيف حالك؟ أنا نورهان",
+                "أهلاً بك! نورهان في خدمتك",
+                "مرحبا! أنا نورهان، مساعدة الذكاء الاصطناعي"
             ],
             "how_are_you": [
-                "أنا بخير، شكراً لك! سعيد لأني أتحدث معك 🌸",
-                "الحمد لله، أنا بخير! وأنت كيف حالك؟ 😊",
-                "أشعر بالراحة، شكراً! كيف يمكنني مساعدتك؟ 💫",
-                "بخير والحمد لله! سعيد لوجودك هنا 🌺"
+                "أنا بخير، شكراً لك! سعيد لأني أتحدث معك",
+                "الحمد لله، أنا بخير! وأنت كيف حالك؟",
+                "أشعر بالراحة، شكراً! كيف يمكنني مساعدتك؟",
+                "بخير والحمد لله! سعيد لوجودك هنا"
             ],
             "help": [
                 "أنا هنا لمساعدتك! يمكنني الإجابة على أسئلتك وإجراء محادثات ممتعة 🌟",
@@ -272,7 +272,7 @@ class NorhanAI:
 def main():
     """Main function to run the AI agent"""
     print("=" * 60)
-    print("🤖 نورهان AI Agent - Norhan's Interactive Assistant")
+    print("Norhan AI Agent - Norhan's Interactive Assistant")
     print("=" * 60)
     print("Type your messages in Arabic or English!")
     print("Type 'exit' or 'quit' to end the conversation")
@@ -283,28 +283,28 @@ def main():
     
     while True:
         try:
-            user_input = input("\n👤 You: ").strip()
+            user_input = input("\nYou: ").strip()
             
             if not user_input:
                 continue
                 
             # Handle special commands
             if user_input.lower() in ['exit', 'quit', 'وداعاً', 'مع السلامة']:
-                print(f"\n🤖 {agent.name}: {agent.get_personalized_response('farewell', agent.detect_language(user_input))}")
+                print(f"\n{agent.name}: {agent.get_personalized_response('farewell', agent.detect_language(user_input))}")
                 break
             elif user_input.lower() in ['stats', 'إحصائيات']:
-                print(f"\n🤖 {agent.name}: {agent.get_conversation_stats()}")
+                print(f"\n{agent.name}: {agent.get_conversation_stats()}")
                 continue
             
             # Generate response
             response = agent.respond(user_input)
-            print(f"\n🤖 {agent.name}: {response}")
+            print(f"\n{agent.name}: {response}")
             
         except KeyboardInterrupt:
-            print(f"\n\n🤖 {agent.name}: {agent.get_personalized_response('farewell', 'english')}")
+            print(f"\n\n{agent.name}: {agent.get_personalized_response('farewell', 'english')}")
             break
         except Exception as e:
-            print(f"\n🤖 {agent.name}: عذراً، حدث خطأ. Sorry, an error occurred. 😅")
+            print(f"\n{agent.name}: عذراً، حدث خطأ. Sorry, an error occurred.")
             print(f"Error: {e}")
 
 if __name__ == "__main__":
