@@ -1,0 +1,35 @@
+{
+  "user_info": {
+    "name": "Majed",
+    "age": "21",
+    "location": "Cairo",
+    "profession": "graphic",
+    "interests": [
+      "programming"
+    ],
+    "favorite_color": "blue",
+    "favorite_food": "",
+    "hobbies": [],
+    "goals": [],
+    "personality_traits": [],
+    "relationship_status": "",
+    "family_info": {},
+    "work_info": {},
+    "education": "",
+    "languages": [],
+    "favorite_topics": [],
+    "conversation_count": 28,
+    "last_seen": "2025-10-20T02:38:42.040559",
+    "relationship_level": "friend",
+    "special_memories": [],
+    "preferences": {
+      "communication_style": "",
+      "favorite_time": "",
+      "favorite_season": "",
+      "favorite_music": "",
+      "favorite_movies": []
+    }
+  },
+  "last_updated": "2025-10-20T02:38:42.040559",
+  "version": "2.0"
+}

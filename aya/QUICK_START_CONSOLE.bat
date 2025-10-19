@@ -1,10 +1,10 @@
 @echo off
 cd /d "%~dp0"
 echo ========================================
-echo    Aya - Enhanced Learning AI Agent
+echo    Aya - Enhanced Console Version
 echo ========================================
 echo.
-echo 🚀 Starting Enhanced Learning AI Agent...
+echo 🚀 Starting Enhanced Version...
 echo.
 echo 📋 Features:
 echo    🧠 Strong and persistent memory
@@ -13,16 +13,10 @@ echo    💬 Natural and friendly conversation
 echo    📚 Continuous learning from conversations
 echo    🔄 Automatic data saving
 echo    🌟 Customized responses based on relationship level
-echo    💾 Memory persists between sessions
-echo.
-echo 📁 Memory files will be saved in this directory:
-echo    - aya_enhanced_memory.json (your information)
-echo    - aya_enhanced_conversations.json (conversation history)
-echo    - aya_enhanced_personality.json (Aya's personality)
 echo.
 echo ========================================
 echo.
-python enhanced_learning_ai_agent.py
+python enhanced_ai_agent.py
 echo.
-echo Agent has been stopped.
+echo Program has been closed.
 pause

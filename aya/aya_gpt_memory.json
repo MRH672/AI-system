@@ -1,0 +1,33 @@
+{
+  "user_info": {
+    "name": "مصمم",
+    "age": "21",
+    "location": "",
+    "profession": "",
+    "interests": [],
+    "favorite_color": "أزرق",
+    "favorite_food": "",
+    "hobbies": [],
+    "goals": [],
+    "personality_traits": [],
+    "relationship_status": "",
+    "family_info": {},
+    "work_info": {},
+    "education": "",
+    "languages": [],
+    "favorite_topics": [],
+    "conversation_count": 20,
+    "last_seen": "2025-10-20T02:28:38.304088",
+    "relationship_level": "صديق",
+    "special_memories": [],
+    "preferences": {
+      "communication_style": "",
+      "favorite_time": "",
+      "favorite_season": "",
+      "favorite_music": "",
+      "favorite_movies": []
+    }
+  },
+  "last_updated": "2025-10-20T02:28:38.304088",
+  "version": "3.0"
+}

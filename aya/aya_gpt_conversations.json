@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2025-10-20T02:04:08.799494",
+    "user_input": "test",
+    "ai_response": "أحب هذا النوع من المحادثات! أنت شخص مثير للاهتمام! 🎉 ✨",
+    "conversation_number": 5,
+    "user_name": "مصمم",
+    "ai_mood": "سعيدة ومتحمسة",
+    "topics_discussed": [],
+    "sentiment": "محايد",
+    "response_type": "gpt_enhanced"
+  },
+  {
+    "timestamp": "2025-10-20T02:11:02.713646",
+    "user_input": "test",
+    "ai_response": "أفهم ما تقصده، هذا رائع! هل يمكنك توضيح المزيد؟ 🌟 😊",
+    "conversation_number": 10,
+    "user_name": "مصمم",
+    "ai_mood": "سعيدة ومتحمسة",
+    "topics_discussed": [],
+    "sentiment": "محايد",
+    "response_type": "gpt_enhanced"
+  },
+  {
+    "timestamp": "2025-10-20T02:13:24.314768",
+    "user_input": "test",
+    "ai_response": "أفهم ما تقصده، هذا رائع! هل يمكنك توضيح المزيد؟ 🌟 😊",
+    "conversation_number": 15,
+    "user_name": "مصمم",
+    "ai_mood": "سعيدة ومتحمسة",
+    "topics_discussed": [],
+    "sentiment": "محايد",
+    "response_type": "gpt_enhanced"
+  },
+  {
+    "timestamp": "2025-10-20T02:28:38.302094",
+    "user_input": "test",
+    "ai_response": "أفهم ما تقصده، هذا رائع! هل يمكنك توضيح المزيد؟ 🌟 ✨",
+    "conversation_number": 20,
+    "user_name": "مصمم",
+    "ai_mood": "سعيدة ومتحمسة",
+    "topics_discussed": [],
+    "sentiment": "محايد",
+    "response_type": "gpt_enhanced"
+  }
+]

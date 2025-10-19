@@ -1,10 +1,11 @@
 @echo off
 cd /d "%~dp0"
 echo ========================================
-echo    Aya - Enhanced Learning AI Agent
+echo    Aya - Enhanced Web Interface
 echo ========================================
 echo.
-echo 🚀 Starting Enhanced Learning AI Agent...
+echo 🚀 Starting Enhanced Web Interface...
+echo 🌐 Interface will be available at: http://localhost:5000
 echo.
 echo 📋 Features:
 echo    🧠 Strong and persistent memory
@@ -13,16 +14,14 @@ echo    💬 Natural and friendly conversation
 echo    📚 Continuous learning from conversations
 echo    🔄 Automatic data saving
 echo    🌟 Customized responses based on relationship level
-echo    💾 Memory persists between sessions
+echo    🎨 Beautiful and creative web interface
 echo.
-echo 📁 Memory files will be saved in this directory:
-echo    - aya_enhanced_memory.json (your information)
-echo    - aya_enhanced_conversations.json (conversation history)
-echo    - aya_enhanced_personality.json (Aya's personality)
+echo ⚠️ Make sure to install requirements first:
+echo    pip install -r requirements.txt
 echo.
 echo ========================================
 echo.
-python enhanced_learning_ai_agent.py
+python web_app.py
 echo.
-echo Agent has been stopped.
+echo Interface has been closed.
 pause

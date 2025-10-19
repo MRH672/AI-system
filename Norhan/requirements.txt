@@ -1,7 +1,21 @@
-Flask==2.3.3
-Werkzeug==2.3.7
-Jinja2==3.1.2
-MarkupSafe==2.1.3
-itsdangerous==2.1.2
-click==8.1.7
-blinker==1.6.2
+# Norhan AI Agent Requirements
+# Basic Python packages needed for the AI agent
+
+# No external dependencies required!
+# This agent uses only Python standard library modules:
+# - json (for memory storage)
+# - datetime (for time/date responses)
+# - random (for varied responses)
+# - os (for file operations)
+# - typing (for type hints)
+
+# Optional packages for enhanced functionality:
+# requests>=2.25.1          # For web API integration (if needed)
+# python-dateutil>=2.8.2   # For advanced date handling (if needed)
+# colorama>=0.4.4           # For colored terminal output (if needed)
+
+# To install optional packages (if needed later):
+# pip install requests python-dateutil colorama
+
+# Note: The basic agent works without any external dependencies
+# All functionality is built using Python standard library only
