@@ -1,0 +1,7 @@
+# Norhan AI Agent Log
+# This file contains debug and conversation logs
+# Created: 2025-01-17
+
+[INFO] Agent initialized successfully
+[INFO] Memory file loaded
+[INFO] Ready to accept user input
