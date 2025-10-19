@@ -1,0 +1,25 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "text": "hello",
+      "ts": "2025-10-17T19:48:25.162687"
+    },
+    {
+      "role": "assistant",
+      "text": "Hi again! I’m still here and I remember our chat.",
+      "ts": "2025-10-17T19:48:25.162870"
+    },
+    {
+      "role": "user",
+      "text": "mu name is hassan",
+      "ts": "2025-10-17T19:49:10.643734"
+    },
+    {
+      "role": "assistant",
+      "text": "Got it. I've saved that. If you ask later, I can remind you what you said.",
+      "ts": "2025-10-17T19:49:10.643747"
+    }
+  ],
+  "created_at": "2025-10-17T19:48:25.162330"
+}

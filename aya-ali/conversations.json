@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2025-10-18T23:28:17.709619",
+    "user_message": "hello",
+    "intent": "default",
+    "agent_response": "هذا مثير للاهتمام! أخبرني المزيد"
+  },
+  {
+    "timestamp": "2025-10-18T23:37:04.417792",
+    "user_message": "hi",
+    "intent": "greeting",
+    "agent_response": "Welcome! I'm a simple AI agent, how are you doing?"
+  }
+]

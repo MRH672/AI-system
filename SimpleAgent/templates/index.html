@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple AI Agent</title>
+  <style>
+    :root { --bg: #0f172a; --card: #111827; --text: #e5e7eb; --muted: #9ca3af; --accent: #22c55e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+    .header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .badge { background: #16a34a22; color: var(--accent); padding: 4px 10px; border-radius: 999px; font-size: 12px; border: 1px solid #16a34a66; }
+    .card { background: var(--card); border: 1px solid #ffffff11; border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: 1fr auto; min-height: 70vh; }
+    .messages { padding: 16px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
+    .row { display: flex; gap: 8px; }
+    .row.user { justify-content: flex-end; }
+    .row.assistant { justify-content: flex-start; }
+    .bubble { padding: 10px 12px; border-radius: 12px; max-width: 75%; line-height: 1.35; border: 1px solid #ffffff14; }
+    .user .bubble { background: #1f2937; }
+    .assistant .bubble { background: #0b5; color: #052; border-color: #063; }
+    .input { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 12px; border-top: 1px solid #ffffff14; background: #0b1020; }
+    input[type="text"] { padding: 12px 14px; border-radius: 10px; border: 1px solid #2a3344; background: #0f1525; color: var(--text); outline: none; }
+    button { background: var(--accent); color: #052; border: none; padding: 12px 16px; border-radius: 10px; font-weight: 600; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .muted { color: var(--muted); font-size: 12px; }
+  </style>
+  <script>
+    async function sendMessage() {
+      const input = document.getElementById('msg');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      input.focus();
+      toggleSending(true);
+
+      const container = document.getElementById('messages');
+      appendBubble(container, 'user', text);
+      try {
+        const res = await fetch('/api/message', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        });
+        const data = await res.json();
+        appendBubble(container, 'assistant', data.reply);
+        container.scrollTop = container.scrollHeight;
+      } catch (e) {
+        appendBubble(container, 'assistant', 'Sorry, something went wrong.');
+      } finally {
+        toggleSending(false);
+      }
+    }
+
+    function appendBubble(container, role, text) {
+      const row = document.createElement('div');
+      row.className = `row ${role}`;
+      const bubble = document.createElement('div');
+      bubble.className = `bubble`;
+      bubble.textContent = text;
+      row.appendChild(bubble);
+      container.appendChild(row);
+    }
+
+    function toggleSending(sending) {
+      const btn = document.getElementById('send');
+      btn.disabled = sending;
+      btn.textContent = sending ? 'Sending…' : 'Send';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('messages');
+      const existing = JSON.parse(document.getElementById('seed').textContent);
+      for (const msg of existing) {
+        appendBubble(container, msg.role, msg.text);
+      }
+      container.scrollTop = container.scrollHeight;
+      document.getElementById('msg').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+      });
+    });
+  </script>
+  <script type="application/json" id="seed">{{ messages|tojson }}</script>
+  </head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">Simple English AI Agent</span>
+      <span class="muted">I remember what you say, even if you come back later.</span>
+    </div>
+    <div class="card">
+      <div class="messages" id="messages"></div>
+      <div class="input">
+        <input id="msg" type="text" placeholder="Type your message in English…" autocomplete="off" />
+        <button id="send" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
