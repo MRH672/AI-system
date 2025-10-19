@@ -40,15 +40,35 @@ def stats():
     except Exception as e:
         return jsonify({'error': f'Error fetching stats: {str(e)}'}), 500
 
-@app.route('/clear')
-def clear_conversations():
-    """Clear conversation history"""
+@app.route('/personal_info')
+def get_personal_info():
+    """Get personal information about the user"""
     try:
-        agent.conversations = []
-        agent.save_conversations()
-        return jsonify({'message': 'Conversations cleared successfully'})
+        return jsonify({
+            'personal_info': agent.personal_info,
+            'has_info': bool(agent.personal_info.get('user_name'))
+        })
     except Exception as e:
-        return jsonify({'error': f'Error clearing conversations: {str(e)}'}), 500
+        return jsonify({'error': f'Error fetching personal info: {str(e)}'}), 500
+
+@app.route('/clear_personal_info')
+def clear_personal_info():
+    """Clear personal information"""
+    try:
+        agent.personal_info = {
+            "user_name": "",
+            "user_age": "",
+            "user_profession": "",
+            "user_location": "",
+            "user_preferences": {},
+            "learned_facts": [],
+            "conversation_count": 0,
+            "last_conversation": ""
+        }
+        agent.save_personal_info()
+        return jsonify({'message': 'Personal information cleared successfully'})
+    except Exception as e:
+        return jsonify({'error': f'Error clearing personal info: {str(e)}'}), 500
 
 if __name__ == '__main__':
     print("🚀 Starting Aya-Ali AI Agent...")

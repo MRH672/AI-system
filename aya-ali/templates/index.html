@@ -188,6 +188,23 @@
             background: rgba(255,255,255,0.3);
         }
 
+        .personal-info-button {
+            position: absolute;
+            top: 20px;
+            left: 150px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .personal-info-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
         .clear-button {
             position: absolute;
             top: 20px;
@@ -217,6 +234,7 @@
     <div class="chat-container">
         <div class="chat-header">
             <button class="stats-button" onclick="showStats()">📊 Statistics</button>
+            <button class="personal-info-button" onclick="showPersonalInfo()">👤 My Info</button>
             <button class="clear-button" onclick="clearChat()">🗑️ Clear Chat</button>
             🤖 Aya-Ali AI Agent
         </div>
@@ -332,6 +350,51 @@
             }
         }
 
+        async function showPersonalInfo() {
+            try {
+                const response = await fetch('/personal_info');
+                const data = await response.json();
+                
+                if (response.ok) {
+                    if (data.has_info) {
+                        const info = data.personal_info;
+                        let infoText = "Personal Information:\n\n";
+                        
+                        if (info.user_name) {
+                            infoText += `Name: ${info.user_name}\n`;
+                        }
+                        if (info.user_age) {
+                            infoText += `Age: ${info.user_age} years old\n`;
+                        }
+                        if (info.user_profession) {
+                            infoText += `Profession: ${info.user_profession}\n`;
+                        }
+                        if (info.user_location) {
+                            infoText += `Location: ${info.user_location}\n`;
+                        }
+                        
+                        infoText += `\nConversation Count: ${info.conversation_count}\n`;
+                        infoText += `Learned Facts: ${info.learned_facts.length}\n`;
+                        
+                        if (info.learned_facts.length > 0) {
+                            infoText += "\nRecent Facts:\n";
+                            info.learned_facts.slice(-3).forEach(fact => {
+                                infoText += `- ${fact.fact}\n`;
+                            });
+                        }
+                        
+                        alert(infoText);
+                    } else {
+                        alert("No personal information stored yet. Start chatting and tell me about yourself!");
+                    }
+                } else {
+                    alert(`Error: ${data.error}`);
+                }
+            } catch (error) {
+                alert(`Connection error: ${error.message}`);
+            }
+        }
+
         async function clearChat() {
             if (confirm('Are you sure you want to clear all conversations?')) {
                 try {
@@ -350,8 +413,28 @@
             }
         }
 
+        async function loadPersonalizedGreeting() {
+            try {
+                const response = await fetch('/personal_info');
+                const data = await response.json();
+                
+                if (response.ok && data.has_info) {
+                    const info = data.personal_info;
+                    if (info.user_name) {
+                        const welcomeMessage = document.querySelector('.welcome-message');
+                        welcomeMessage.textContent = `Hello ${info.user_name}! Welcome back! I remember our conversations. How can I help you today?`;
+                    }
+                }
+            } catch (error) {
+                // Ignore errors for greeting loading
+            }
+        }
+
         // Focus on input field when page loads
         messageInput.focus();
+        
+        // Load personalized greeting if available
+        loadPersonalizedGreeting();
     </script>
 </body>
 </html>

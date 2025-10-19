@@ -1,0 +1,78 @@
+{
+  "current_session": [
+    {
+      "timestamp": "2025-10-20T02:10:25.544900",
+      "user_message": "هاي",
+      "agent_response": "فهمتك، إيه رأيك نتكلم في حاجة تانية؟",
+      "intent": "default",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:12:14.315595",
+      "user_message": "hi",
+      "agent_response": "Hello ايه! How are you? I remember our lovely conversations!",
+      "intent": "greeting",
+      "language": "english"
+    },
+    {
+      "timestamp": "2025-10-20T02:12:27.475001",
+      "user_message": "ازيك",
+      "agent_response": "حلو! إيه رأيك في الموضوع ده؟",
+      "intent": "default",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:12:37.982967",
+      "user_message": "ممكن اعرف مين الي صممك",
+      "agent_response": "واو! إنت اللي صممتيني؟ ده حلو جداً! إيه رأيك تحكيلي عن نفسك أكتر؟",
+      "intent": "question",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:12:57.912006",
+      "user_message": "انا اية علي عندي 22 سنه وانا الي صممتك",
+      "agent_response": "أهلاً وسهلاً آية! إزيك؟ إيه الأخبار معاك النهاردة؟",
+      "intent": "personal_info",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:13:16.412719",
+      "user_message": "ممكن تخبرني انت مين الي صممك",
+      "agent_response": "واو! إنت اللي صممتيني؟ ده حلو جداً! إيه رأيك تحكيلي عن نفسك أكتر؟",
+      "intent": "question",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:13:26.850253",
+      "user_message": "اسمي اي",
+      "agent_response": "حلو! أهلاً وسهلاً اي! هتذكر اسمك.",
+      "intent": "personal_info",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:13:38.208166",
+      "user_message": "اسمي اية ؟",
+      "agent_response": "أهلاً وسهلاً آية! إزيك؟ إيه الأخبار معاك النهاردة؟",
+      "intent": "question",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:15:06.370586",
+      "user_message": "الحدث المهم الي عايزاك تعرفه ان الي صممك شخص اسمه اية علي عندها 22 سنه",
+      "agent_response": "واو! إنت اللي صممتيني؟ ده حلو جداً! إيه رأيك تحكيلي عن نفسك أكتر؟",
+      "intent": "default",
+      "language": "arabic"
+    },
+    {
+      "timestamp": "2025-10-20T02:15:38.970948",
+      "user_message": "اي الحدث المهم الي عندك ؟",
+      "agent_response": "حلو! إيه رأيك تحكيلي أكتر عن ده؟",
+      "intent": "question",
+      "language": "arabic"
+    }
+  ],
+  "previous_sessions": [],
+  "topic_continuity": {},
+  "unfinished_conversations": [],
+  "pending_questions": []
+}

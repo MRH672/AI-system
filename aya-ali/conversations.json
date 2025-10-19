@@ -10,5 +10,17 @@
     "user_message": "hi",
     "intent": "greeting",
     "agent_response": "Welcome! I'm a simple AI agent, how are you doing?"
+  },
+  {
+    "timestamp": "2025-10-18T23:59:30.096429",
+    "user_message": "hi",
+    "intent": "greeting",
+    "agent_response": "Hello! I'm Aya-Ali AI, how can I help you today?"
+  },
+  {
+    "timestamp": "2025-10-19T00:01:01.213720",
+    "user_message": "i,m aya 22 years old and i,m your developer",
+    "intent": "personal_info",
+    "agent_response": "Thanks for telling me you're 22 years old!"
   }
 ]

@@ -1,0 +1,175 @@
+[
+  {
+    "timestamp": "2025-10-20T01:20:06.031862",
+    "user_message": "hi",
+    "intent": "greeting",
+    "agent_response": "Welcome! I'm a simple AI agent, how are you doing?"
+  },
+  {
+    "timestamp": "2025-10-20T01:20:48.628563",
+    "user_message": "wh is the designer!",
+    "intent": "default",
+    "agent_response": "Great! What do you think about this topic?"
+  },
+  {
+    "timestamp": "2025-10-20T01:21:20.831491",
+    "user_message": "who is the designer?",
+    "intent": "question",
+    "agent_response": "I'd be happy to help with that. What specifically would you like to know?"
+  },
+  {
+    "timestamp": "2025-10-20T01:23:34.016441",
+    "user_message": "who is the designer who made you !",
+    "intent": "question",
+    "agent_response": "I'd be happy to help with that. What specifically would you like to know?"
+  },
+  {
+    "timestamp": "2025-10-20T01:25:19.246471",
+    "user_message": "my name is aya ali , i am 22 years old  i designed you",
+    "intent": "personal_info",
+    "agent_response": "نعم، أذكر أنك أخبرتني من قبل: 'my name is aya ali , i am 22 years old  i designed you'. هل تريد تحديث هذه المعلومة؟"
+  },
+  {
+    "timestamp": "2025-10-20T01:25:28.272094",
+    "user_message": "yes",
+    "intent": "default",
+    "agent_response": "I understand, would you like to talk about something else?"
+  },
+  {
+    "timestamp": "2025-10-20T01:26:23.766755",
+    "user_message": "frome the designer who made you",
+    "intent": "question",
+    "agent_response": "That's a great question! Let me think about that"
+  },
+  {
+    "timestamp": "2025-10-20T01:26:35.911768",
+    "user_message": "نا بسالك",
+    "intent": "default",
+    "agent_response": "I understand, would you like to talk about something else?"
+  },
+  {
+    "timestamp": "2025-10-20T01:30:01.521001",
+    "user_message": "i am aya ali , i am 22 years old . i designed you . my favorite food is pasta , and i g to univerity every day",
+    "intent": "personal_info",
+    "agent_response": "نعم، أذكر أنك أخبرتني من قبل: 'i am aya ali , i am 22 years old . i designed you . my favorite food is pasta , and i g to univerity every day'. هل تريد تحديث هذه المعلومة؟"
+  },
+  {
+    "timestamp": "2025-10-20T01:30:33.869388",
+    "user_message": "yes , tell them",
+    "intent": "default",
+    "agent_response": "That sounds cool! Can you elaborate?"
+  },
+  {
+    "timestamp": "2025-10-20T01:33:34.445618",
+    "user_message": "hey ai , who is the designer who dsigned yo !?",
+    "intent": "greeting",
+    "agent_response": "Hi Aya! How are you doing today?"
+  },
+  {
+    "timestamp": "2025-10-20T01:34:44.541591",
+    "user_message": "i'm fine thinks     can you tell me who designed you ??",
+    "intent": "greeting",
+    "agent_response": "نعم، أذكر أنك أخبرتني من قبل: 'i'm fine thinks     can you tell me who designed you ??'. هل تريد تحديث هذه المعلومة؟"
+  },
+  {
+    "timestamp": "2025-10-20T01:49:25.450449",
+    "user_message": "هااي",
+    "intent": "default",
+    "agent_response": "حلو! إيه رأيك في الموضوع ده؟"
+  },
+  {
+    "timestamp": "2025-10-20T01:49:31.540024",
+    "user_message": "اويك",
+    "intent": "default",
+    "agent_response": "حلو! إيه رأيك تحكيلي أكتر عن ده؟"
+  },
+  {
+    "timestamp": "2025-10-20T01:49:49.939370",
+    "user_message": "انا اسمي ايه",
+    "intent": "personal_info",
+    "agent_response": "أيوه، أذكر أنك أخبرتني من قبل: 'انا اسمي ايه'. إيه رأيك تحكيلي أكتر عن ده؟"
+  },
+  {
+    "timestamp": "2025-10-20T01:50:03.791511",
+    "user_message": "ممكن اسال سؤال",
+    "intent": "default",
+    "agent_response": "حلو! إيه رأيك في الموضوع ده؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:08:52.285649",
+    "user_message": "hi",
+    "intent": "greeting",
+    "language": "english",
+    "agent_response": "Hello ايه! How are you? I remember our lovely conversations!"
+  },
+  {
+    "timestamp": "2025-10-20T02:10:25.544900",
+    "user_message": "هاي",
+    "intent": "default",
+    "language": "arabic",
+    "agent_response": "فهمتك، إيه رأيك نتكلم في حاجة تانية؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:12:14.315595",
+    "user_message": "hi",
+    "intent": "greeting",
+    "language": "english",
+    "agent_response": "Hello ايه! How are you? I remember our lovely conversations!"
+  },
+  {
+    "timestamp": "2025-10-20T02:12:27.475001",
+    "user_message": "ازيك",
+    "intent": "default",
+    "language": "arabic",
+    "agent_response": "حلو! إيه رأيك في الموضوع ده؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:12:37.982967",
+    "user_message": "ممكن اعرف مين الي صممك",
+    "intent": "question",
+    "language": "arabic",
+    "agent_response": "واو! إنت اللي صممتيني؟ ده حلو جداً! إيه رأيك تحكيلي عن نفسك أكتر؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:12:57.912006",
+    "user_message": "انا اية علي عندي 22 سنه وانا الي صممتك",
+    "intent": "personal_info",
+    "language": "arabic",
+    "agent_response": "أهلاً وسهلاً آية! إزيك؟ إيه الأخبار معاك النهاردة؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:13:16.412719",
+    "user_message": "ممكن تخبرني انت مين الي صممك",
+    "intent": "question",
+    "language": "arabic",
+    "agent_response": "واو! إنت اللي صممتيني؟ ده حلو جداً! إيه رأيك تحكيلي عن نفسك أكتر؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:13:26.850253",
+    "user_message": "اسمي اي",
+    "intent": "personal_info",
+    "language": "arabic",
+    "agent_response": "حلو! أهلاً وسهلاً اي! هتذكر اسمك."
+  },
+  {
+    "timestamp": "2025-10-20T02:13:38.208166",
+    "user_message": "اسمي اية ؟",
+    "intent": "question",
+    "language": "arabic",
+    "agent_response": "أهلاً وسهلاً آية! إزيك؟ إيه الأخبار معاك النهاردة؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:15:06.370586",
+    "user_message": "الحدث المهم الي عايزاك تعرفه ان الي صممك شخص اسمه اية علي عندها 22 سنه",
+    "intent": "default",
+    "language": "arabic",
+    "agent_response": "واو! إنت اللي صممتيني؟ ده حلو جداً! إيه رأيك تحكيلي عن نفسك أكتر؟"
+  },
+  {
+    "timestamp": "2025-10-20T02:15:38.970948",
+    "user_message": "اي الحدث المهم الي عندك ؟",
+    "intent": "question",
+    "language": "arabic",
+    "agent_response": "حلو! إيه رأيك تحكيلي أكتر عن ده؟"
+  }
+]
