@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": "2025-10-20T02:25:20.828958",
+    "user_input": "hi",
+    "ai_response": "Hello Majed! Welcome! How are you? 😊 ✨",
+    "conversation_number": 6,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:25:48.840833",
+    "user_input": "am fine what about you",
+    "ai_response": "Really? That's new to me! I'm excited to learn more! 💫 😊",
+    "conversation_number": 7,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:26:01.428146",
+    "user_input": "i am 21",
+    "ai_response": "I'll remember that you're 21 years old! Thanks for sharing this information! 🌟",
+    "conversation_number": 8,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:26:14.531196",
+    "user_input": "how old i am",
+    "ai_response": "That's interesting! Tell me more, I enjoy listening to you! 😊✨ 😊",
+    "conversation_number": 9,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:27:53.741190",
+    "user_input": "hi",
+    "ai_response": "Hello Majed! Welcome! How are you? 😊 ✨",
+    "conversation_number": 10,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:28:19.199497",
+    "user_input": "what is my age?",
+    "ai_response": "I understand what you mean, that's great! Can you explain more? 🌟 😊",
+    "conversation_number": 11,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:29:33.771816",
+    "user_input": "iam aya",
+    "ai_response": "That's exciting! Can you share more details? ✨ 😊",
+    "conversation_number": 12,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:29:41.064355",
+    "user_input": "i made you",
+    "ai_response": "I understand what you mean, that's great! Can you explain more? 🌟 😊",
+    "conversation_number": 13,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:29:54.572553",
+    "user_input": "iam 21 years old",
+    "ai_response": "Excellent! I'll remember this about you, thanks for sharing this information! 😊✨ 😊",
+    "conversation_number": 14,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:30:23.481114",
+    "user_input": "what is my age",
+    "ai_response": "That's exciting! Can you share more details? ✨ 😊",
+    "conversation_number": 15,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:35:01.927356",
+    "user_input": "hi",
+    "ai_response": "Hello Majed! Welcome! How are you? 😊 😊",
+    "conversation_number": 21,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:35:25.965775",
+    "user_input": "iam fine what about you",
+    "ai_response": "That's interesting! Tell me more, I enjoy listening to you! 😊✨ 😊",
+    "conversation_number": 22,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:35:59.266801",
+    "user_input": "do you remember what is my name",
+    "ai_response": "Yes! I remember that your name is Majed! 😊✨",
+    "conversation_number": 23,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:36:48.895648",
+    "user_input": "do you remember my age?",
+    "ai_response": "Yes! I remember that you're 21 years old! 😊✨",
+    "conversation_number": 24,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:37:24.454613",
+    "user_input": "hi",
+    "ai_response": "Hello Majed! Welcome! How are you? 😊 😊",
+    "conversation_number": 25,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:37:40.149397",
+    "user_input": "do you remember my age?",
+    "ai_response": "Yes! I remember that you're 21 years old! 😊✨",
+    "conversation_number": 26,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:38:09.038919",
+    "user_input": "my favourate color is red",
+    "ai_response": "This is interesting! I'll save this information in my memory! 💫 ✨",
+    "conversation_number": 27,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  },
+  {
+    "timestamp": "2025-10-20T02:38:42.040559",
+    "user_input": "do you remember my favourate color",
+    "ai_response": "Yes! I remember that your name is Majed, you're 21 years old, you're from Cairo, you work as a graphic, your favorite color is blue, you like programming! 😊✨",
+    "conversation_number": 28,
+    "user_name": "Majed",
+    "ai_mood": "excited and optimistic",
+    "topics_discussed": [],
+    "sentiment": "neutral"
+  }
+]

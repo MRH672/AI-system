@@ -13,7 +13,9 @@ echo    QUICK_START_GPT_WEB.bat          - Enhanced web interface
 echo    QUICK_START_GPT_CONSOLE.bat      - Enhanced version
 echo    QUICK_START_WEB.bat              - Regular web interface
 echo    QUICK_START_CONSOLE.bat          - Regular version
+echo    QUICK_START_LEARNING.bat         - Enhanced learning agent (NEW!)
 echo    QUICK_TEST.bat                   - Test all features
+echo    QUICK_TEST_LEARNING.bat          - Test enhanced learning agent (NEW!)
 echo.
 echo 🛠️ Maintenance Files:
 echo    INSTALL_REQUIREMENTS.bat         - Install requirements
@@ -25,8 +27,10 @@ echo 🤖 Programming Files:
 echo    gpt_enhanced_ai_agent.py         - Enhanced AI Agent with ChatGPT
 echo    gpt_web_app.py                   - Enhanced web application
 echo    enhanced_ai_agent.py             - Regular enhanced AI Agent
+echo    enhanced_learning_ai_agent.py   - Enhanced learning agent (NEW!)
 echo    web_app.py                       - Regular web application
 echo    test_all_features.py             - Test all features
+echo    test_enhanced_learning.py        - Test enhanced learning agent (NEW!)
 echo.
 echo 📋 Configuration Files:
 echo    requirements.txt                 - Python requirements
@@ -49,12 +53,16 @@ echo    aya_gpt_personality.json         - Enhanced Aya personality file
 echo    aya_enhanced_memory.json         - Regular enhanced memory file
 echo    aya_enhanced_conversations.json  - Regular enhanced conversations file
 echo    aya_enhanced_personality.json    - Regular enhanced Aya personality file
+echo    aya_memory.json                  - Learning agent memory file
+echo    aya_conversations.json           - Learning agent conversations file
 echo.
 echo ========================================
 echo.
 echo 💡 Tips:
 echo    - Start with START_HERE.bat for easy launching
-echo    - Use QUICK_TEST.bat to test features
+echo    - Use QUICK_START_LEARNING.bat for enhanced learning agent
+echo    - Use QUICK_TEST.bat to test all features
+echo    - Use QUICK_TEST_LEARNING.bat to test learning agent
 echo    - Use INSTALL_REQUIREMENTS.bat to install requirements
 echo    - Use RESET_MEMORY.bat to reset memory
 echo.

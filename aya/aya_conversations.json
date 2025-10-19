@@ -40,5 +40,17 @@
     "user_input": "do you record this ?",
     "ai_response": "Hey! Great to see you! :D",
     "conversation_number": 9
+  },
+  {
+    "timestamp": "2025-10-20T02:17:54.996597",
+    "user_input": "aya",
+    "ai_response": "I love this kind of conversation! :D",
+    "conversation_number": 10
+  },
+  {
+    "timestamp": "2025-10-20T02:18:02.081325",
+    "user_input": "21",
+    "ai_response": "Really? That's new to me! *learning*",
+    "conversation_number": 11
   }
 ]

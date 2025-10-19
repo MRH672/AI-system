@@ -26,12 +26,17 @@ echo 4. Enhanced Console Version
 echo    - Console version with strong memory
 echo    - Unique and evolving personality
 echo.
-echo 5. Test All Features
+echo 5. Enhanced Learning Agent (NEW!)
+echo    - Console version with persistent memory
+echo    - Remembers everything between sessions
+echo    - Perfect for learning and testing
+echo.
+echo 6. Test All Features
 echo    - Comprehensive testing of all versions and features
 echo.
 echo ========================================
 echo.
-set /p choice="Choose the version you want to run (1-5): "
+set /p choice="Choose the version you want to run (1-6): "
 
 if "%choice%"=="1" (
     echo.
@@ -57,12 +62,17 @@ if "%choice%"=="1" (
     python enhanced_ai_agent.py
 ) else if "%choice%"=="5" (
     echo.
+    echo 🚀 Starting Enhanced Learning Agent...
+    echo.
+    python enhanced_learning_ai_agent.py
+) else if "%choice%"=="6" (
+    echo.
     echo 🧪 Starting comprehensive testing of all features...
     echo.
     python test_all_features.py
 ) else (
     echo.
-    echo ❌ Invalid choice. Please choose a number from 1 to 5.
+    echo ❌ Invalid choice. Please choose a number from 1 to 6.
     echo.
     pause
     goto :eof

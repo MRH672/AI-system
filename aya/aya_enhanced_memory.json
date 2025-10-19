@@ -1,11 +1,13 @@
 {
   "user_info": {
-    "name": "مصمم",
+    "name": "Majed",
     "age": "21",
-    "location": "",
-    "profession": "",
-    "interests": [],
-    "favorite_color": "أزرق",
+    "location": "Cairo",
+    "profession": "graphic",
+    "interests": [
+      "programming"
+    ],
+    "favorite_color": "blue",
     "favorite_food": "",
     "hobbies": [],
     "goals": [],
@@ -16,9 +18,9 @@
     "education": "",
     "languages": [],
     "favorite_topics": [],
-    "conversation_count": 20,
-    "last_seen": "2025-10-20T02:28:38.304088",
-    "relationship_level": "صديق",
+    "conversation_count": 28,
+    "last_seen": "2025-10-20T02:38:42.040559",
+    "relationship_level": "friend",
     "special_memories": [],
     "preferences": {
       "communication_style": "",
@@ -28,6 +30,6 @@
       "favorite_movies": []
     }
   },
-  "last_updated": "2025-10-20T02:28:38.304088",
-  "version": "3.0"
+  "last_updated": "2025-10-20T02:38:42.040559",
+  "version": "2.0"
 }

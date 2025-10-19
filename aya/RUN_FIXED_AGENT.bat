@@ -2,6 +2,7 @@
 cd /d "%~dp0"
 echo ========================================
 echo    Aya - Enhanced Learning AI Agent
+echo    FIXED VERSION - Ready to Use!
 echo ========================================
 echo.
 echo 🚀 Starting Enhanced Learning AI Agent...
@@ -14,11 +15,13 @@ echo    📚 Continuous learning from conversations
 echo    🔄 Automatic data saving
 echo    🌟 Customized responses based on relationship level
 echo    💾 Memory persists between sessions
+echo    ✅ All bugs fixed!
 echo.
-echo 📁 Memory files will be saved in this directory:
-echo    - aya_enhanced_memory.json (your information)
-echo    - aya_enhanced_conversations.json (conversation history)
-echo    - aya_enhanced_personality.json (Aya's personality)
+echo 💡 Tips:
+echo    - Tell me your name, age, profession, interests
+echo    - Ask me: "What is my age?", "What is my name?"
+echo    - Ask me: "Remember" to see all my memories
+echo    - I'll remember everything between sessions!
 echo.
 echo ========================================
 echo.

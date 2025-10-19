@@ -13,6 +13,8 @@ echo    - aya_gpt_personality.json
 echo    - aya_enhanced_memory.json
 echo    - aya_enhanced_conversations.json
 echo    - aya_enhanced_personality.json
+echo    - aya_memory.json
+echo    - aya_conversations.json
 echo.
 echo ========================================
 echo.
@@ -65,11 +67,26 @@ if /i "%confirm%"=="y" (
         echo ⚠️ aya_enhanced_personality.json does not exist
     )
     
+    if exist "aya_memory.json" (
+        del "aya_memory.json"
+        echo ✅ Deleted aya_memory.json
+    ) else (
+        echo ⚠️ aya_memory.json does not exist
+    )
+    
+    if exist "aya_conversations.json" (
+        del "aya_conversations.json"
+        echo ✅ Deleted aya_conversations.json
+    ) else (
+        echo ⚠️ aya_conversations.json does not exist
+    )
+    
     echo.
     echo ✅ Memory reset successfully!
     echo.
     echo 🚀 You can now run Aya with fresh memory:
     echo    - Double-click START_HERE.bat
+    echo    - Or use QUICK_START_LEARNING.bat for enhanced learning agent
     echo    - Or use one of the available launcher files
 ) else (
     echo.
