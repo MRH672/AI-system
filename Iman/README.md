@@ -1,29 +1,47 @@
-# Simple AI Agent (Iman)
+# AI Agent Interactive - إيمان
 
-A tiny, dependency-free AI agent with a text REPL.
+## التشغيل على Windows
 
-## Run on Windows
-
-Double-click `run_simple_agent.bat` or run:
+اضغط مرتين على `run_simple_agent.bat` أو شغل:
 
 ```bash
 Iman> .\run_simple_agent.bat
 ```
 
-If you prefer Python directly:
+أو مباشرة بـ Python:
 
 ```bash
 Iman> python simple_agent.py
 ```
 
-## Features
-- Greetings (English/Arabic)
-- Help prompt
-- Quick, generic summaries: `summarize <topic>` or `خلاصة <topic>`
-- Current time
-- Echo fallback
-- Exit with `exit`, `quit`, or `خروج`
+## الميزات الجديدة
 
-## Notes
-- Requires Python 3.8+
-- No external packages required
+### الذاكرة المتقدمة
+- **يتذكر اسمك وعمرك** حتى لو أغلقت البرنامج
+- **يحفظ تفضيلاتك** وما تحبه
+- **يتذكر أنه صممته أنت** (إيمان، 23 سنة)
+- **يحفظ تاريخ المحادثات** وعدد المرات
+
+### التفاعل الذكي
+- **ردود باللغة العربية** بدون رموز تعبيرية
+- **يتعلم من كل رسالة** تحفظها له
+- **أسئلة تفاعلية** لمعرفة المزيد عنك
+- **ترحيب شخصي** عند العودة
+
+### الأوامر المتاحة
+- `اسمي إيمان` - لتعريف نفسك
+- `عمري 23 سنة` - لإخباره بعمرك
+- `أحب البرمجة` - لمشاركة تفضيلاتك
+- `صممتك` - لإخباره أنك مصممه
+- `من صممك؟` - لسؤاله عن مصممه
+- `ماذا تعرف؟` - لرؤية ما حفظه عنك
+- `مساعدة` - لعرض الأوامر المتاحة
+- `خروج` - للخروج
+
+## الملفات المحفوظة
+- `memory.json` - يحفظ معلوماتك الشخصية
+- `conversations.json` - يحفظ تاريخ المحادثات
+
+## المتطلبات
+- Python 3.8+ فقط
+- لا حاجة لمكتبات خارجية
